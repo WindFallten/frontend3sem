@@ -1,11 +1,12 @@
 <template>
   <v-app :theme="theme">
-    <div class="header" >
-      <HeaderComp/>
-      <v-btn max-width="40px" :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'" @click="onClick"></v-btn>
+    <div class="header">
+      <HeaderComp />
+      <v-btn max-width="40px" :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+        @click="onClick"></v-btn>
     </div>
     <v-main class="main">
-      <router-view/>
+      <router-view />
     </v-main>
     <FooterComp></FooterComp>
   </v-app>
@@ -28,19 +29,19 @@ export default {
 }
 </script>
 <script setup>
-    import { ref } from 'vue'
+import { ref } from 'vue'
 
-    const theme = ref('dark')
+const theme = ref('dark')
 
-    function onClick () {
-    theme.value = theme.value === 'light' ? 'dark' : 'light'
-    }
+function onClick() {
+  theme.value = theme.value === 'light' ? 'dark' : 'light'
+}
 </script>
 <style>
-  .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1%;
-  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1%;
+}
 </style>

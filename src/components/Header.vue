@@ -1,38 +1,21 @@
 <template>
     <header>
         <a href=""><v-img src="../assets/logo.png" alt="logo" width="100px"></v-img></a>
-        <ul>
+        <nav>
             <v-row justify="center" no-gutters>
-            <li>
-                <router-link
-                class="no-underline cursor-pointer"
-                to="/"
-                >
-                <v-btn
-                    variant="text"
-                    class="mx-2"
-                    rounded="xl"
-                >
-                    Главная
-                </v-btn>
+                <router-link class="no-underline cursor-pointer" to="/">
+                    <v-btn variant="text" class="mx-2" rounded="xl">
+                        Главная
+                    </v-btn>
                 </router-link>
-            </li>
-            <li>
-                <router-link
-                class="no-underline cursor-pointer"
-                to="/about"
-                >
-                <v-btn
-                    variant="text"
-                    class="mx-2"
-                    rounded="xl"
-                >
-                    О нас
-                </v-btn>
+
+                <router-link class="no-underline cursor-pointer" to="/about">
+                    <v-btn variant="text" class="mx-2" rounded="xl">
+                        О нас
+                    </v-btn>
                 </router-link>
-            </li>
             </v-row>
-        </ul>
+        </nav>
         <v-menu v-model="menu" location="end" :close-on-content-click="false">
             <template v-slot:activator="{ props }">
                 <v-btn color="indigo" v-bind="props">
@@ -53,6 +36,10 @@
                 <v-divider></v-divider>
 
                 <v-list>
+                    <v-list-item> 
+                        <a href="https://github.com/WindFallten/frontend3sem">Github</a>
+                        
+                    </v-list-item>
                     <v-list-item>
                         <v-switch v-model="message" color="purple" label="Enable messages" hide-details></v-switch>
                     </v-list-item>
@@ -86,12 +73,12 @@ export default {
         message: false,
         hints: true,
         links: [
-        'Home',
-        'About Us',
-        'Team',
-        'Services',
-        'Blog',
-        'Contact Us',
+            'Home',
+            'About Us',
+            'Team',
+            'Services',
+            'Blog',
+            'Contact Us',
         ],
     })
 }
@@ -101,13 +88,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    header{
-        display: flex;
-        
-        align-items: center;
-        margin: 0px 5px ;
-    }
-    header ul li{
-        text-decoration: none;
-    }
+header {
+    display: flex;
+
+    align-items: center;
+    margin: 0px 5px;
+}
 </style>

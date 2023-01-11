@@ -1,5 +1,5 @@
 <template>
-  <AboutComp/>
+  <AboutComp />
 </template>
 
 <script>
@@ -8,9 +8,9 @@ import AboutComp from '../components/About.vue';
 
 export default defineComponent({
   name: 'AboutView',
-
   components: {
     AboutComp,
   },
+  
 });
 </script>
